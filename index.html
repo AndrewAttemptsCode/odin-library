@@ -32,5 +32,32 @@
             </table>
         </div>
     </div>
+
+    <!-- Dialog form to add a new book to the library -->
+    <dialog id="addBookDialog">
+        <form id="addBookForm">
+            <h2>Add a New Book</h2>
+            <div>
+                <label for="inputAuthor">Author:</label>
+                <input type="text" name="author" id="inputAuthor">
+            </div>
+            <div>
+                <label for="inputTitle">Title:</label>
+                <input type="text" name="title" id="inputTitle">
+            </div>
+            <div>
+                <label for="inputPages">Total Pages:</label>
+                <input type="number" name="pages" id="inputPages">
+            </div>
+            <div>
+                <label for="inputRead">Read:</label>
+                <input type="checkbox" name="read" id="inputRead">
+            </div>
+            <div class="form-buttons">
+                <button type="button" id="cancelButton">Cancel</button>
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+    </dialog> 
 </body>
 </html>
