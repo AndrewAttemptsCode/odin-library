@@ -17,6 +17,8 @@ function addBookToLibrary() {
 
     myLibrary.push(newBook);
     displayLibrary();
+    addBookForm.reset();
+    addBookDialog.close();
 }
 
 function displayLibrary() {
