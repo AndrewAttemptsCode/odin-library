@@ -11,7 +11,7 @@
 
 html,
 body {
-    height: 100vh;
+    background: #94a3b8;
 }
   
 body {
@@ -40,7 +40,6 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Layout */
 
 .library-container {
-    height: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -80,7 +79,6 @@ p, h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-rows: auto 1fr;
     padding: 20px;
-    background: #94a3b8;
 }
 
 .library-title {
