@@ -25,7 +25,7 @@ function displayLibrary() {
 
     myLibrary.forEach(book => {
         const row = document.createElement("tr");
-        row.textContent = `
+        row.innerHTML = `
             <td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
