@@ -8,6 +8,11 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+html,
+body {
+    height: 100vh;
+}
   
 body {
     line-height: 1.5;
@@ -30,4 +35,40 @@ p, h1, h2, h3, h4, h5, h6 {
   
 #root, #__next {
     isolation: isolate;
+}
+
+/* Layout */
+
+.library-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* Header */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    align-items: center;
+    background: #64748b;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #cbd5e1;
+}
+
+.add-book {
+    justify-self: end;
+}
+
+#addBookButton {
+    width: 55px;
+    height: 55px;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
