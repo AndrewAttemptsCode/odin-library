@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-    const bookTitle = document.querySelector("#inputBookTitle").value;
+    const bookTitle = document.querySelector("#inputTitle").value;
     const bookAuthor = document.querySelector("#inputAuthor").value;
     const bookPages = Number(document.querySelector("#inputPages").value);
     const bookRead = document.querySelector("#inputRead").checked;
@@ -34,3 +34,21 @@ function displayLibrary() {
         tableBody.appendChild(row);
     });
 }
+
+const addBookButton = document.querySelector("#addBookButton");
+const addBookDialog = document.querySelector("#addBookDialog");
+const addBookCancel = document.querySelector("#cancelButton");
+const addBookForm = document.querySelector("#addBookForm");
+
+addBookButton.addEventListener("click", () => {
+    addBookDialog.showModal();
+})
+
+addBookCancel.addEventListener("click", () => {
+    addBookDialog.close();
+})
+
+addBookForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addBookToLibrary();
+})
