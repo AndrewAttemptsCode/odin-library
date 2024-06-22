@@ -25,22 +25,37 @@ function displayLibrary() {
     const tableBody = document.querySelector("#libraryTableBody");
     tableBody.textContent = "";
 
-    myLibrary.forEach(book => {
+    myLibrary.forEach((book, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td>${book.read ? "Read" : "Not Read"}</td>`;
+            <td>${book.read ? "Read" : "Not Read"}</td>
+            <td><button class="remove-book-button" data-index="${index}">Remove</button></td>`;
         
         tableBody.appendChild(row);
     });
+
+    attachRemoveEventListeners();
 }
 
 const addBookButton = document.querySelector("#addBookButton");
 const addBookDialog = document.querySelector("#addBookDialog");
 const addBookCancel = document.querySelector("#cancelButton");
 const addBookForm = document.querySelector("#addBookForm");
+
+function attachRemoveEventListeners() {
+    const removeBookButtons = document.querySelectorAll(".remove-book-button");
+
+    removeBookButtons.forEach(button => {
+        button.addEventListener("click", () => {
+        const indexToRemove = button.getAttribute("data-index");
+        myLibrary.splice(indexToRemove, 1);
+        displayLibrary();
+    });
+})
+}
 
 addBookButton.addEventListener("click", () => {
     addBookDialog.showModal();
