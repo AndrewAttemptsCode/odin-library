@@ -23,7 +23,7 @@
                         <th>Author</th>
                         <th>Title</th>
                         <th>Page Count</th>
-                        <th>Read</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody id="libraryTableBody">
@@ -38,20 +38,23 @@
         <form id="addBookForm">
             <h2>Add a New Book</h2>
             <div>
-                <label for="inputAuthor">Author:</label>
+                <label for="inputAuthor">Author</label>
                 <input type="text" name="author" id="inputAuthor">
             </div>
             <div>
-                <label for="inputTitle">Title:</label>
+                <label for="inputTitle">Title</label>
                 <input type="text" name="title" id="inputTitle">
             </div>
             <div>
-                <label for="inputPages">Total Pages:</label>
+                <label for="inputPages">Total Pages</label>
                 <input type="number" name="pages" id="inputPages">
             </div>
-            <div class="checkbox-container">
-                <label for="inputRead">Read:</label>
-                <input type="checkbox" name="read" id="inputRead">
+            <div>
+                <label for="inputRead">Status</label>
+                <select type="select" name="read" id="inputRead">
+                    <option value="true">Read</option>
+                    <option value="false">Not Read</option>
+                </select>
             </div>
             <div class="form-buttons">
                 <button type="button" id="cancelButton">Cancel</button>

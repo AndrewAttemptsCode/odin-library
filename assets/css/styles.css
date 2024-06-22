@@ -106,32 +106,32 @@ th {
 
 #addBookForm {
     display: grid;
-    width: 450px;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: center;
+    width: 100%;
 }
 
-#addBookForm h2 {
-    grid-column: 1 / -1;
-    color: #475569;
+#addBookForm label,
+#addBookForm input,
+#addBookForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #334155;
 }
 
 #addBookForm label {
-    color: #334155;
     font-weight: bold;
     font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 5px;
 }
 
-#addBookForm .checkbox-container {
-    display: flex;
-    align-items: center;
-}
-
-input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+#addBookForm select {
+    height: 40px;
 }
 
 .form-buttons {

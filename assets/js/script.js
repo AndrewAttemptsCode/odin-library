@@ -11,7 +11,7 @@ function addBookToLibrary() {
     const bookTitle = document.querySelector("#inputTitle").value;
     const bookAuthor = document.querySelector("#inputAuthor").value;
     const bookPages = Number(document.querySelector("#inputPages").value);
-    const bookRead = document.querySelector("#inputRead").checked;
+    const bookRead = document.querySelector("#inputRead").value === "true";
 
     const newBook = new Book(bookTitle, bookAuthor, bookPages, bookRead);
 
@@ -31,7 +31,7 @@ function displayLibrary() {
             <td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td>${book.read ? "Yes" : "No"}</td>`;
+            <td>${book.read ? "Read" : "Not Read"}</td>`;
         
         tableBody.appendChild(row);
     });
