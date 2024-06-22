@@ -88,7 +88,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 th {
     font-size: 1.2rem;
-    color: #334155;
+    color: #f8fafc;
 }
 
 /* Dialog */
@@ -157,3 +157,50 @@ th {
 .form-buttons button[type="button"]:hover {
     background: #ef4444;
 }
+
+/* Library Table */
+
+table {
+    width: 50vw;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    table-layout: auto;
+    justify-self: center;
+}
+
+tr th {
+    padding: 10px 10px;
+    background: #475569;
+    text-align: center;
+}
+
+tr th:first-of-type,
+tr td:first-of-type {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+tr th:last-of-type,
+tr td:last-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+tr td {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background: #cbd5e1;
+    color: #64748b;
+}
+
+tr:nth-child(even) {
+    background: #64748b;
+    color: #cbd5e1;
+}
+
+
+
+
