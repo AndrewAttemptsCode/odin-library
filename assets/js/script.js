@@ -31,13 +31,14 @@ function displayLibrary() {
             <td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td>${book.read ? "Read" : "Not Read"}</td>
+            <td><button class="toggleStatus" data-index="${index}">${book.read ? "Read" : "Not Read"}</button></td>
             <td><button class="removeBookButton" data-index="${index}">&times;</button></td>`;
         
         tableBody.appendChild(row);
     });
 
     attachRemoveEventListeners();
+    toggleStatus();
 }
 
 const addBookButton = document.querySelector("#addBookButton");
@@ -69,3 +70,14 @@ addBookForm.addEventListener("submit", (event) => {
     event.preventDefault();
     addBookToLibrary();
 })
+
+function toggleStatus() {
+    const toggleButtons = document.querySelectorAll(".toggleStatus");
+    toggleButtons.forEach(button => {
+        const statusIndex = button.getAttribute("data-index");
+        button.addEventListener("click", () => {
+            myLibrary[statusIndex].read = !myLibrary[statusIndex].read;
+            displayLibrary();
+        });
+    });
+}
