@@ -195,11 +195,13 @@ tr td {
 tr:nth-child(odd) {
     background: #cbd5e1;
     color: #64748b;
+    font-weight: 500;
 }
 
 tr:nth-child(even) {
     background: #64748b;
     color: #cbd5e1;
+    font-weight: 500;
 }
 
 .removeBookButton {
