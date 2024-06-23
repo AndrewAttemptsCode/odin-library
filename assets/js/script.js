@@ -32,7 +32,7 @@ function displayLibrary() {
             <td>${book.title}</td>
             <td>${book.pages}</td>
             <td>${book.read ? "Read" : "Not Read"}</td>
-            <td><button class="remove-book-button" data-index="${index}">Remove</button></td>`;
+            <td><button class="removeBookButton" data-index="${index}">&times;</button></td>`;
         
         tableBody.appendChild(row);
     });
@@ -46,7 +46,7 @@ const addBookCancel = document.querySelector("#cancelButton");
 const addBookForm = document.querySelector("#addBookForm");
 
 function attachRemoveEventListeners() {
-    const removeBookButtons = document.querySelectorAll(".remove-book-button");
+    const removeBookButtons = document.querySelectorAll(".removeBookButton");
 
     removeBookButtons.forEach(button => {
         button.addEventListener("click", () => {
