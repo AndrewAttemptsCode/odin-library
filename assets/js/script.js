@@ -25,13 +25,16 @@ function displayLibrary() {
     const tableBody = document.querySelector("#libraryTableBody");
     tableBody.textContent = "";
 
+        
+
     myLibrary.forEach((book, index) => {
+        const styleSwitch = book.read ? "read" : "not-read";
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td><button class="toggleStatus" data-index="${index}">${book.read ? "Read" : "Not Read"}</button></td>
+            <td><button class="toggleStatus ${styleSwitch}" data-index="${index}">${book.read ? "Read" : "Not Read"}</button></td>
             <td><button class="removeBookButton" data-index="${index}">&times;</button></td>`;
         
         tableBody.appendChild(row);
@@ -81,3 +84,4 @@ function toggleStatus() {
         });
     });
 }
+
