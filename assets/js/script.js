@@ -25,8 +25,6 @@ function displayLibrary() {
     const tableBody = document.querySelector("#libraryTableBody");
     tableBody.textContent = "";
 
-        
-
     myLibrary.forEach((book, index) => {
         const styleSwitch = book.read ? "read" : "not-read";
         const row = document.createElement("tr");
