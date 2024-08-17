@@ -1,247 +1,276 @@
 /* Roboto Google Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* CSS Reset */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html,
 body {
-    background: #94a3b8;
+  background: #94a3b8;
 }
-  
+
 body {
-    line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
-  
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
-  
-input, button, textarea, select {
-    font: inherit;
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
-  
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
-  
-#root, #__next {
-    isolation: isolate;
+
+#root,
+#__next {
+  isolation: isolate;
 }
 
 /* Layout */
 
 .library-container {
-    display: grid;
-    grid-template-rows: auto 1fr;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 /* Header */
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    align-items: center;
-    background: #64748b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  align-items: center;
+  background: #64748b;
 }
 
 .header-title,
 .library-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #cbd5e1;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #cbd5e1;
 }
 
 .add-book {
-    justify-self: end;
+  justify-self: end;
 }
 
 #addBookButton {
-    width: 55px;
-    height: 55px;
-    border: none;
-    background: none;
-    cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 /* Main */
 
 .main {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 20px;
 }
 
 .library-title {
-    font-size: 1.5rem;
-    color: #475569;
+  font-size: 1.5rem;
+  color: #475569;
 }
 
 th {
-    font-size: 1.2rem;
-    color: #f8fafc;
+  font-size: 1.2rem;
+  color: #f8fafc;
 }
 
 /* Dialog */
 
 #addBookDialog {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8fafc;
-    padding: 20px;
-    border: 4px solid #1e293b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8fafc;
+  padding: 20px;
+  border: 4px solid #1e293b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 650px;
 }
 
 #addBookForm {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
 }
 
 #addBookForm label,
 #addBookForm input,
 #addBookForm select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #334155;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #334155;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #334155;
 }
 
 #addBookForm label {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #334155;
-    margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #334155;
+  margin-bottom: 5px;
 }
 
 #addBookForm select {
-    height: 40px;
+  height: 40px;
 }
 
 .form-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .form-buttons button {
-    color: #f1f5f9;
-    background: #1e293b;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px 16px;
+  color: #f1f5f9;
+  background: #1e293b;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 16px;
 }
 
 .form-buttons button[type="submit"]:hover {
-    background: #84cc16;
+  background: #84cc16;
 }
 
 .form-buttons button[type="button"]:hover {
-    background: #ef4444;
+  background: #ef4444;
+}
+
+#author-error,
+#title-error,
+#pages-error {
+  display: none;
+  color: red;
+}
+
+#author-error.active,
+#title-error.active,
+#pages-error.active {
+  display: inline-block;
+  padding-left: 10px;
 }
 
 /* Library Table */
 
 table {
-    width: 50vw;
-    border-collapse: separate;
-    border-spacing: 0 0.5rem;
-    table-layout: auto;
-    justify-self: center;
+  width: 50vw;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  table-layout: auto;
+  justify-self: center;
 }
 
 tr th {
-    padding: 10px 10px;
-    background: #475569;
-    text-align: center;
+  padding: 10px 10px;
+  background: #475569;
+  text-align: center;
 }
 
 tr th:first-of-type,
 tr td:first-of-type {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 tr th:last-of-type,
 tr td:last-of-type {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 tr td {
-    padding: 10px 10px;
-    text-align: center;
-    position: relative;
+  padding: 10px 10px;
+  text-align: center;
+  position: relative;
 }
 
 tr:nth-child(odd) {
-    background: #cbd5e1;
-    color: #64748b;
-    font-weight: 500;
+  background: #cbd5e1;
+  color: #64748b;
+  font-weight: 500;
 }
 
 tr:nth-child(even) {
-    background: #64748b;
-    color: #cbd5e1;
-    font-weight: 500;
+  background: #64748b;
+  color: #cbd5e1;
+  font-weight: 500;
 }
 
 .removeBookButton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: none;
-    font-size: 2rem;
-    color: red;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .read,
 .not-read {
-    position: absolute;
-    top: 6px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 75%;
-    color: #f8fafc;
-    border-radius: 10px;
-    cursor: pointer;
+  position: absolute;
+  top: 6px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 75%;
+  color: #f8fafc;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .read {
-    background: #84cc16;
+  background: #84cc16;
 }
 
 .not-read {
-    background: #ef4444;
+  background: #ef4444;
 }

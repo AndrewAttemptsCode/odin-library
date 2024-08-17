@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="./assets/js/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="library-container">
-        <div class="header">
-            <div class="header-title">Library</div>
-            <div class="add-book">
-                <button id="addBookButton"><img src="./assets/images/book-add.svg" alt="Add book"></button>
-            </div>
+      <div class="header">
+        <div class="header-title">Library</div>
+        <div class="add-book">
+          <button id="addBookButton">
+            <img src="./assets/images/book-add.svg" alt="Add book" />
+          </button>
         </div>
-        <div class="main">
-            <div class="library-title">My Books</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Author</th>
-                        <th>Title</th>
-                        <th>Page Count</th>
-                        <th>Status</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody id="libraryTableBody">
-
-                </tbody>
-            </table>
-        </div>
+      </div>
+      <div class="main">
+        <div class="library-title">My Books</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Author</th>
+              <th>Title</th>
+              <th>Page Count</th>
+              <th>Status</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="libraryTableBody"></tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Dialog form to add a new book to the library -->
     <dialog id="addBookDialog">
-        <form id="addBookForm">
-            <h2>Add a New Book</h2>
-            <div>
-                <label for="inputAuthor">Author</label>
-                <input type="text" name="author" id="inputAuthor">
-            </div>
-            <div>
-                <label for="inputTitle">Title</label>
-                <input type="text" name="title" id="inputTitle">
-            </div>
-            <div>
-                <label for="inputPages">Total Pages</label>
-                <input type="number" name="pages" id="inputPages">
-            </div>
-            <div>
-                <label for="inputRead">Status</label>
-                <select type="select" name="read" id="inputRead">
-                    <option value="true">Read</option>
-                    <option value="false">Not Read</option>
-                </select>
-            </div>
-            <div class="form-buttons">
-                <button type="button" id="cancelButton">Cancel</button>
-                <button type="submit">Add Book</button>
-            </div>
-        </form>
-    </dialog> 
-</body>
+      <form id="addBookForm" novalidate>
+        <h2>Add a New Book</h2>
+        <div>
+          <label for="inputAuthor">Author</label>
+          <span id="author-error" aria-live="polite"></span>
+          <input
+            type="text"
+            name="author"
+            id="inputAuthor"
+            minlength="3"
+            required
+          />
+        </div>
+        <div>
+          <label for="inputTitle">Title</label>
+          <span id="title-error" aria-live="polite"></span>
+          <input
+            type="text"
+            name="title"
+            id="inputTitle"
+            minlength="3"
+            required
+          />
+        </div>
+        <div>
+          <label for="inputPages">Total Pages</label>
+          <span id="pages-error" aria-live="polite"></span>
+          <input type="number" name="pages" id="inputPages" min="1" required />
+        </div>
+        <div>
+          <label for="inputRead">Status</label>
+          <select type="select" name="read" id="inputRead">
+            <option value="true">Read</option>
+            <option value="false">Not Read</option>
+          </select>
+        </div>
+        <div class="form-buttons">
+          <button type="button" id="cancelButton">Cancel</button>
+          <button type="submit">Add Book</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
 </html>
